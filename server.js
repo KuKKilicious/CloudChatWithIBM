@@ -8,7 +8,7 @@ var fs = require('fs');
 var path = require('path');
 var logic = require('./util/logicHelper')
 //process.env.PORT || 3000 : whatever is in the environment variable PORT, or 3000 if there's nothing there. (running PORT=1234 node index.js sets port to 1234(Windows: set PORT=1234 then npm start in new line)
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || process.env.VCAP_APP_PORT || 3000;
 var userList = [];
 var allSockets = {};
 var userCount = 0;
