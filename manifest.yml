@@ -1,0 +1,4 @@
+applications:
+- name: distracted-torvalds
+  memory: 512M
+  instances: 1
